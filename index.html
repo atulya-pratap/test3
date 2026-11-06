@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Saniya | The Celebrity Archive</title>
+    
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Special+Elite&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Subtle Vintage Paper Texture Overlay -->
+    <div class="texture-overlay"></div>
+
+    <!-- SECTION 01: THE GRAND ENTRANCE -->
+    <header id="grand-entrance" class="section-fullscreen dark-theme">
+        <div class="entrance-content fade-in-up">
+            <span class="top-label">PRIVATE CELEBRITY ARCHIVE</span>
+            <h1 class="celebrity-title">SANIYA</h1>
+            <span class="subtitle">THE ORIGINAL ICON</span>
+            
+            <div class="portrait-frame">
+                <!-- Placeholder for Saniya's Portrait -->
+                <div class="portrait-placeholder">
+                    <span class="star-deco">★</span>
+                </div>
+            </div>
+            
+            <p class="tagline">"Some people enter a room.<br>Some become the reason it is remembered."</p>
+            
+            <button id="enter-btn" class="editorial-btn">ENTER HER WORLD</button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT (Hidden until entry) -->
+    <main id="main-archive" class="hidden">
+        
+        <!-- SECTION 02: THE CELEBRITY PROFILE -->
+        <section id="profile" class="editorial-section">
+            <div class="section-header">
+                <span class="ornament">✦</span>
+                <h2 class="editorial-heading">THE WOMAN. THE LEGEND.<br>THE SANIYA.</h2>
+                <span class="ornament">✦</span>
+            </div>
+
+            <div class="profile-card">
+                <div class="profile-details">
+                    <div class="detail-row">
+                        <span class="detail-label">NAME</span>
+                        <span class="detail-value">Saniya</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">BIRTHDAY</span>
+                        <span class="detail-value">29 August</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">HOMETOWN</span>
+                        <span class="detail-value">Varanasi</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">OFFICIAL DESIGNATION</span>
+                        <span class="detail-value">Professional Icon</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">STATUS</span>
+                        <span class="detail-value">Permanently Iconic</span>
+                    </div>
+                </div>
+
+                <div class="editorial-bio">
+                    <p>An individual known for her remarkable presence, unpredictable adventures and undeniable main-character energy.</p>
+                </div>
+
+                <div class="celebrity-seal">
+                    <svg viewBox="0 0 100 100" class="seal-svg">
+                        <path id="curve" d="M 50 15 A 35 35 0 1 1 49.9 15" fill="transparent" />
+                        <text class="seal-text">
+                            <textPath href="#curve" startOffset="50%" text-anchor="middle">
+                                ★ OFFICIALLY ICONIC ★ SANIYA ★
+                            </textPath>
+                        </text>
+                        <circle cx="50" cy="50" r="20" fill="none" stroke="var(--antique-gold)" stroke-width="1"/>
+                        <text x="50" y="55" font-family="var(--font-serif)" font-size="12" fill="var(--antique-gold)" text-anchor="middle" font-style="italic">Icon</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Placeholders for upcoming stages -->
+        <section id="license" class="editorial-section"></section>
+        <section id="reviews" class="editorial-section"></section>
+    </main>
+
+    <!-- MOBILE NAVIGATION (Hidden initially) -->
+    <nav id="mobile-nav" class="bottom-nav hidden">
+        <a href="#profile" class="nav-item active">PROFILE</a>
+        <a href="#license" class="nav-item">LICENSE</a>
+        <a href="#reviews" class="nav-item">VERDICT</a>
+        <a href="#awards" class="nav-item">AWARDS</a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
