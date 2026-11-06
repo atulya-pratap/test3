@@ -1,0 +1,279 @@
+/* DESIGN SYSTEM & VARIABLES */
+:root {
+    /* Palette */
+    --vintage-parchment: #E9D9B5;
+    --antique-ivory: #F4EBD7;
+    --warm-cream: #F8F1E3;
+    --ink-black: #211D19;
+    --charcoal: #302923;
+    --muted-burgundy: #702F38;
+    --antique-gold: #B69A62;
+    --dusty-blue: #7794A0;
+    --aged-brown: #806B50;
+
+    /* Typography */
+    --font-display: 'Cormorant Garamond', serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'DM Sans', sans-serif;
+    --font-mono: 'Special Elite', monospace;
+
+    /* Spacing & Layout */
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 3rem;
+    --mobile-max: 390px;
+}
+
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--antique-ivory);
+    color: var(--ink-black);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* GLOBAL TEXTURE */
+.texture-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.04"/%3E%3C/svg%3E');
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* SECTION 01: THE GRAND ENTRANCE */
+.section-fullscreen {
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-md);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.dark-theme {
+    background-color: var(--charcoal);
+    color: var(--antique-ivory);
+}
+
+.top-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--antique-gold);
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-md);
+    display: block;
+}
+
+.celebrity-title {
+    font-family: var(--font-display);
+    font-size: 4.5rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--antique-gold);
+    margin-bottom: var(--spacing-lg);
+    display: block;
+}
+
+.portrait-frame {
+    width: 220px;
+    height: 280px;
+    margin: 0 auto var(--spacing-lg);
+    border: 1px solid var(--antique-gold);
+    padding: 8px;
+    position: relative;
+}
+
+.portrait-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: var(--ink-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star-deco {
+    color: var(--antique-gold);
+    font-size: 2rem;
+}
+
+.tagline {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    max-width: 320px;
+    margin: 0 auto var(--spacing-lg);
+    color: rgba(244, 235, 215, 0.8);
+}
+
+.editorial-btn {
+    background: transparent;
+    color: var(--antique-gold);
+    border: 1px solid var(--antique-gold);
+    padding: 1rem 2rem;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.editorial-btn:active {
+    background: var(--antique-gold);
+    color: var(--charcoal);
+}
+
+/* SECTION 02: EDITORIAL PROFILE */
+.editorial-section {
+    padding: 5rem var(--spacing-md);
+    max-width: var(--mobile-max);
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.editorial-heading {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--ink-black);
+    margin: 1rem 0;
+}
+
+.ornament {
+    color: var(--antique-gold);
+    font-size: 1.2rem;
+}
+
+.profile-card {
+    background: var(--warm-cream);
+    border: 1px solid rgba(182, 154, 98, 0.3);
+    padding: var(--spacing-md);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(33, 29, 25, 0.05);
+}
+
+.profile-details {
+    border-bottom: 1px dashed var(--aged-brown);
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.detail-label {
+    font-family: var(--font-mono);
+    color: var(--aged-brown);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.detail-value {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    color: var(--ink-black);
+}
+
+.editorial-bio {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--muted-burgundy);
+    margin-bottom: var(--spacing-lg);
+}
+
+.celebrity-seal {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    animation: rotate 20s linear infinite;
+}
+
+.seal-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.seal-text {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    fill: var(--ink-black);
+    letter-spacing: 2px;
+}
+
+/* NAVIGATION */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--charcoal);
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0.5rem;
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--antique-gold);
+    z-index: 100;
+}
+
+.nav-item {
+    color: var(--antique-ivory);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.nav-item.active {
+    opacity: 1;
+    color: var(--antique-gold);
+}
+
+/* UTILITIES & ANIMATIONS */
+.hidden {
+    display: none !important;
+}
+
+.fade-out-up {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
